@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.scss";
+import "@/styles/globals.scss";
 import { mitr, nunito } from "@/utils/fonts";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${mitr.className}`}>{children}</body>
+    <html lang="en" className="light">
+      <body className={`${mitr.className}`}>
+        <Providers>
+            {children}
+        </Providers>
+      </body>
     </html>
   );
 }
