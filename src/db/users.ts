@@ -7,12 +7,10 @@ export async function getUsers() {
   noStore();
 
   let conn;
-  console.log("conn: ", conn);
-  
+
   try {
     
     conn = await fetchConn();
-    console.log("conn2: ", conn);
 
     // Use Connection
     var rows = await get_users(conn);    
@@ -20,7 +18,6 @@ export async function getUsers() {
       console.log("Total connections: ", pool.totalConnections());
       console.log("Active connections: ", pool.activeConnections());
       console.log("Idle connections: ", pool.idleConnections());
-      console.log(`${rows[i].user_id} : ${rows[i].name}`);
     }
     return rows;
   } catch (err) {
@@ -34,12 +31,7 @@ export async function getUsers() {
 
 // Fetch Connection
 async function fetchConn() {
-  console.log(111);
-  
-  console.log("pool: ", pool);
-  let conn = await pool.getConnection();
-  console.log("conn1: ", conn);
-  
+  let conn = await pool.getConnection();  
   console.log("Total connections: ", pool.totalConnections());
   console.log("Active connections: ", pool.activeConnections());
   console.log("Idle connections: ", pool.idleConnections());
