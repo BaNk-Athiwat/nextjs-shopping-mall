@@ -12,6 +12,7 @@ export default function Header() {
         deleteCookie('token');
         router.push('/login');
     }
+
     return (
         <div className="">
             <div className="flex justify-between items-center bg-gray-100 min-h-9 px-12 text-xs font-bold">
@@ -30,7 +31,7 @@ export default function Header() {
                         <div className="border-r border-black align-baseline h-3 m-3"></div>
                     </li>
                     <li className="flex items-center tracking-wider">
-                        <Link href={""} className="hover:text-gray-500">
+                        <Link href={"/products"} className="hover:text-gray-500">
                             เข้าร่วมกับเรา
                         </Link>
                         <div className="border-r border-black align-baseline h-3 m-3"></div>
@@ -41,7 +42,7 @@ export default function Header() {
                             type="button"
                             className="hover:text-gray-500"
                         >
-                            ลงชื่อเข้าใช้
+                            ลงชื่อออก
                         </button>
                     </li>
                 </ul>

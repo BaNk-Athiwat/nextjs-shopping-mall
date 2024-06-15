@@ -17,8 +17,7 @@ export default function LoginForm() {
                 email,
                 password,
             });
-            console.log(res);
-            router.push("/manage-products");
+            if(res.status === 200) router.push("/products");
         } catch (error) {
             console.log(error);
         }

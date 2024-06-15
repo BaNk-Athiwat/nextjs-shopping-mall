@@ -1,21 +1,8 @@
 // import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcrypt";
-import { SignJWT } from "jose";
 import { cookies } from "next/headers";
 import prisma from '@/db/db'
-
-// const prisma = new PrismaClient();
-
-async function encrypt(payload: any) {
-    const secret = new TextEncoder().encode(process.env.NEXT_PUBLIC_KEY);
-    const alg = "HS512";
-
-    return await new SignJWT(payload)
-        .setProtectedHeader({ alg })
-        .setIssuedAt()
-        .setExpirationTime("60 sec from now")
-        .sign(secret);
-}
+import { encrypt } from "@/libs/lib";
 
 export async function POST(req: Request) {
     try {
