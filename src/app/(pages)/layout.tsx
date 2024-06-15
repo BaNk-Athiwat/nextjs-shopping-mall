@@ -9,7 +9,9 @@ export default function PageLayout({
     <div className="flex flex-col min-h-screen">
       <div className="block">
         <Header/>
-        {children}
+        <div className="mx-28">
+          {children}
+        </div>
       </div>
     </div>
   );

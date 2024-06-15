@@ -31,8 +31,9 @@ export default function Header() {
                         <div className="border-r border-black align-baseline h-3 m-3"></div>
                     </li>
                     <li className="flex items-center tracking-wider">
-                        <Link href={"/products"} className="hover:text-gray-500">
-                            เข้าร่วมกับเรา
+                        <Link href={"/manage"} className="hover:text-gray-500">
+                            {/* เข้าร่วมกับเรา */}
+                            จัดการสินค้า
                         </Link>
                         <div className="border-r border-black align-baseline h-3 m-3"></div>
                     </li>
@@ -42,6 +43,7 @@ export default function Header() {
                             type="button"
                             className="hover:text-gray-500"
                         >
+                            {/* ลงชื่อเข้าใช้ */}
                             ลงชื่อออก
                         </button>
                     </li>
