@@ -22,7 +22,8 @@ const config: Config = {
     themes: {
       light: {
         colors: {
-          background: "#E5E5E5", // or DEFAULT
+          // background: "#E5E5E5", // or DEFAULT
+          background: "#f3f4f6", // bg-gray-100
         }
       }
     }
